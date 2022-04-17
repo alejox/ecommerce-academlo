@@ -31,5 +31,98 @@
     --z-fixed: 100;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
 /*---------------------------------------Header--------------------------------------------*/
+
+header{
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+
+
+
+.nav-container{
+    height: calc(var(--header-height) + 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    justify-content: space-between;
+    column-gap: 3rem;
+}
+
+.nav-container img{
+    width: 28px;
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-size: var(--normal-font-size);
+}
+
+
+.nav-link {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
+    transition: .3s;
+    font-size: var(--normal-font-size);
+}
+
+.nav-logo{
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    color: var(--title-color);
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+}
+
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: list-item;
+}
+
+.nav-btns{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-left: auto;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.align{
+    position: relative;
+}
+
+/*---------------------------------------Card principal--------------------------------------------*/
+
+
 

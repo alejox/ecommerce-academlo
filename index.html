@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Academlo Store</title>
 </head>
 <body>
     <!--------------------------------------------Header-------------------------------------------------->
     <header>
-      <nav class="nav-container">
+      <nav class="nav-container container">
           <a href="" class="nav-logo">
             <img src="./img/logo.png" alt="">
             Store</a>
 
         <div class="nav-menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
+            <ul class="nav-list">
+                <li><a href="" class="nav-link active-link">Home</a></li>
+                <li><a href="" class="nav-link active-link">Products</a></li>
             </ul>
         </div>
 
-        <div class="nav-btns">
-
+        <div class="nav-btns align">
+          <div class="nav-shop">
+            <i class="ri-moon-line"></i>
+          </div>
+          <i class="ri-shopping-bag-2-line"></i>
         </div>
       </nav>
     </header>
 
     <!------------------------------------------Main------------------------------------------------->
-    <main>
+    <main class="main">
+
+    <!------------------------------------------Home-------------------------------------------------> 
+      <section class="home" id="home">
         <div class="main-container">
             <div class="main-data">
                 <h2>New Sweatshirt <br> COLLECTIONS 2022</h2>
@@ -43,8 +52,9 @@
                 <img src="./img/home.png" alt="">
             </div>
         </div>
+      </section>
 
-        <!------------------------------------------Products------------------------------------------------->
+      <!------------------------------------------Products------------------------------------------------->
         <section class="products">
             <div class="products-container">
                     <ul class="products-filter">
