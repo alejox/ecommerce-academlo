@@ -56,10 +56,14 @@ header{
     -o-transition: .4s;
 }
 
+header.abajo{
+    background-color: var(--container-color);
+    box-shadow: 0 1px 4px hsl(0deg 4% 15% / 10%);
+}
+
 .nav-bar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 90%;
     margin: 0 auto;
 }
@@ -93,7 +97,7 @@ header{
 
 
 /* Estilos para el ícono del Menú */
-.icono-menu{
+.icono-menu-container{
     margin: 20px 10px;
     position: relative;
     z-index: 10;
@@ -103,8 +107,9 @@ header{
 
 .icono-menu img{
     vertical-align: top;
-    width: 40px;
+    width: 20px;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 /* Estilos para el contenedor del Menú */

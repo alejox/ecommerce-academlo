@@ -10,9 +10,15 @@ iconoMenu.addEventListener('click', (e) => {
     // Alternamos su atributo 'src' para el ícono del menú
     const rutaActual = e.target.getAttribute('src');
 
-    if(rutaActual == 'img/open-menu.png'){
-        e.target.setAttribute('src','img/open-menu2.png');
+    if(rutaActual == 'img/open-menu.svg'){
+        e.target.setAttribute('src','img/open-menu2.svg');
     }else{
-        e.target.setAttribute('src','img/open-menu.png');
+        e.target.setAttribute('src','img/open-menu.svg');
     }
 });
+
+
+window.addEventListener('scroll', function(){
+    var header = document.querySelector('header');
+    header.classList.toggle('abajo', this.window.scrollY>0);
+})
