@@ -42,11 +42,189 @@
 </header>
 <!------------------Main--------------------------->
 <main>
-    <div class="main-bg home-img">
-        <img src="./img/home.png" alt="">
+
+<!------------------Home--------------------------->
+    <section class="home" id="home">
+        <div class="home__container container grid">
+          <div class="home__img-bg">
+            <img src="img/home.png" alt="" class="home__img">
+          </div>
+
+          <div class="home__data">
+            <h1 class="home__title">New Sweatshirt <br> COLLECTIONS 2022</h1>
+            <p class="home__description">
+              Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern
+              design.
+            </p>
+            <span class="home__price">$14.00</span>
+
+            <div class="home__btns">
+              <a href="#" class="button button--gray button--small">
+                Discover
+              </a>
+
+              <button class="button home__button">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!------------------Products--------------------------->
+
+<section class="products" id="products">
+    <div class="products__container container">
+      <ul class="products__filters">
+        <li class="products__item products__line mixitup-control-active" data-filter="all">
+          <h3 class="products__title">
+            Show All
+          </h3>
+          <span class="products__stock">
+            show all products
+          </span>
+        </li>
+
+        <li class="products__item products__line active-product" data-filter=".hoodies">
+          <h3 class="products__title">
+            Hoodies
+          </h3>
+          <span class="products__stock">
+            3 products
+          </span>
+        </li>
+
+        <li class="products__item products__line" data-filter=".shirts">
+          <h3 class="products__title">
+            Shirts
+          </h3>
+          <span class="products__stock">
+            4 products
+          </span>
+        </li>
+
+        <li class="products__item" data-filter=".sweatshirts">
+          <h3 class="products__title">
+            Sweatshirts
+          </h3>
+          <span class="products__stock">
+            4 products
+          </span>
+        </li>
+      </ul>
+
+      <div class="products__content grid" id="products__content" style="">
+    <article class="products__card hoodies">
+    <div class="products__shape">
+      <img src="img/featured1.png" alt="Hoodies" class="products__img">
     </div>
 
-   
+    <div class="products__data">
+      <h2 class="products__price">$14.00 <span class="products__quantity">| Stock: 10</span></h2>
+      <h3 class="products__name">Hoodies</h3>
+
+      <button class="button products__button" data-id="1">
+        <i><img src="./img/bx-plus.svg" alt=""></i>
+      </button>
+    </div>
+    </article>
+    <article class="products__card shirts">
+    <div class="products__shape">
+      <img src="img/featured2.png" alt="Shirts" class="products__img">
+    </div>
+
+    <div class="products__data">
+      <h2 class="products__price">$24.00 <span class="products__quantity">| Stock: 15</span></h2>
+      <h3 class="products__name">Shirts</h3>
+
+      <button class="button products__button" data-id="2">
+        <i class="bx bx-plus"></i>
+      </button>
+    </div>
+    </article>
+    <article class="products__card sweatshirts">
+    <div class="products__shape">
+      <img src="img/featured3.png" alt="Sweatshirts" class="products__img">
+    </div>
+
+    <div class="products__data">
+      <h2 class="products__price">$24.00 <span class="products__quantity">| Stock: 20</span></h2>
+      <h3 class="products__name">Sweatshirts</h3>
+
+      <button class="button products__button" data-id="3">
+        <i class="bx bx-plus"></i>
+      </button>
+    </div>
+    </article></div>
+    </div>
+  </section>
+
+<!------------------Footer--------------------------->
+
+  <footer class="footer section">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <h3 class="footer__title">Our information</h3>
+
+        <ul class="footer__list">
+          <li>Toluca - México</li>
+        </ul>
+      </div>
+      <div class="footer__content">
+        <h3 class="footer__title">About Us</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#" class="footer__link">Support Center</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Customer Support</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Copy Right</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Product</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#" class="footer__link">Hoodies</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Shirts</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Sweatshirts</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Social</h3>
+
+        <ul class="footer__social">
+          <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+            <i class="bx bxl-facebook"></i>
+          </a>
+
+          <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+            <i class="bx bxl-twitter"></i>
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+            <i class="bx bxl-instagram"></i>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <span class="footer__copy">© ACADEMLO. All rigths reserved</span>
+  </footer>
+
 </main>
 
 
