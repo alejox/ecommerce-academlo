@@ -1,43 +1,33 @@
-const iconoMenu = document.querySelector('#icono-menu');
-const menu = document.getElementById('nav-menu');
+import { activeProduct } from './components/activeProduct.js'
+import { renderCart } from './components/cart.js'
+import { cartMenu } from './components/cartMenu.js'
+import { darkTheme } from './components/darkTheme.js'
+import { headerScroll } from './components/headerScroll.js'
+import { load } from './components/load.js'
+import { navMenu } from './components/navMenu.js'
+import { renderProducts } from './components/products.js'
+import { sectionActive } from './components/sectionActive.js'
 
-iconoMenu.addEventListener('click', (e) => {
-
-    // Alternamos estilos para el menu y body
-    menu.classList.toggle('active');
-    document.body.classList.toggle('opacity');
-
-    // Alternamos su atributo 'src' para el ícono del menú
-    const rutaActual = e.target.getAttribute('src');
-
-    if(rutaActual == 'img/open-menu.svg'){
-        e.target.setAttribute('src','img/open-menu2.svg');
-    }else{
-        e.target.setAttribute('src','img/open-menu.svg');
-    }
-});
-
-
-window.addEventListener('scroll', function(){
-    var header = document.querySelector('header');
-    header.classList.toggle('abajo', this.window.scrollY>0);
+window.addEventListener('load', function () {
+  load()
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+  darkTheme()
+  headerScroll()
+  navMenu()
+  cartMenu()
+  sectionActive()
+  renderCart()
+  renderProducts()
+  activeProduct()
 
-/*------------------------------Carrito de compras--------------------------------------*/
-
-const botonAgregarCarrito = document.querySelectorAll('.products__button');
-botonAgregarCarrito.forEach(botonCarrito => {
-    botonCarrito.addEventListener('click', clickBotonCarrito);
-});
-
-function clickBotonCarrito (event){
-    const button = event.target;
-    const item = button.closest('.products__card')
-    
-    const itemTitle = item.querySelector('.products__name').textContent;
-    const itemPrice = item.querySelector('.products__price').textContent;
-    console.log("🚀 ~ file: main.js ~ line 40 ~ clickBotonCarrito ~ itemPrice", itemPrice)
-    
-    
-}
+  mixitup('.products__content', {
+    selectors: {
+      target: '.products__card'
+    },
+    animation: {
+      duration: 300
+    }
+  }).filter('all')
+})
