@@ -123,6 +123,26 @@ const items = [
   }
 ];
 
+
+
+const db = {
+  items: window.localStorage.getItem('products') ? JSON.parse(window.localStorage.getItem('products')) : items,
+  methods: {
+    find: (id) => {
+      return db.items.find(item => item.id === id)
+    },
+    getAll: () => {
+      return db.items
+    },
+    remove: (items) => {
+      items.forEach(item => {
+        const product = db.methods.find(item.id)
+        product.quantity = product.quantity - item.quantity
+      })
+    }
+  }
+}
+
 const cart = {
   items: window.localStorage.getItem('cart') ? JSON.parse(window.localStorage.getItem('cart')) : [],
   methods: {
@@ -295,23 +315,6 @@ function numberToCurrency (value) {
 numberToCurrency();
 
 
-const db = {
-  items: window.localStorage.getItem('products') ? JSON.parse(window.localStorage.getItem('products')) : items,
-  methods: {
-    find: (id) => {
-      return db.items.find(item => item.id === id)
-    },
-    getAll: () => {
-      return db.items
-    },
-    remove: (items) => {
-      items.forEach(item => {
-        const product = db.methods.find(item.id)
-        product.quantity = product.quantity - item.quantity
-      })
-    }
-  }
-}
 
 
   const renderProducts = () => {
