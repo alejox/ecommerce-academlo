@@ -91,7 +91,7 @@ function activeProduct () {
       this.classList.add('active-product')
     })
   }
-}
+};
 
 activeProduct();
 
@@ -121,7 +121,7 @@ const items = [
     category: 'sweatshirts',
     quantity: 20
   }
-]
+];
 
 const cart = {
   items: window.localStorage.getItem('cart') ? JSON.parse(window.localStorage.getItem('cart')) : [],
@@ -357,6 +357,8 @@ const db = {
 
   window.localStorage.setItem('products', JSON.stringify(db.items))
 }
+
+renderProducts();
 
 
 
